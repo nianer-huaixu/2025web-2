@@ -4,14 +4,24 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "next build && npm run move",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "move": "xcopy /e /i .next\\static .next\\standalone\\.next\\static"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.21",
+    "mobx": "^6.13.7",
+    "mobx-react": "^9.2.0",
+    "mysql2": "^3.14.1",
+    "next": "15.3.2",
+    "postcss": "^8.5.3",
     "react": "^19.0.0",
+    "react-countup": "^6.5.3",
     "react-dom": "^19.0.0",
-    "next": "15.3.2"
+    "react-slick": "^0.30.3",
+    "sass": "^1.89.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
