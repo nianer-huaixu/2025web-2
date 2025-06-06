@@ -30,9 +30,95 @@ body {
 header{
   background: linear-gradient(#000 0%,rgba(255,255,255,0) 80%);
   transition:all 0.3s linear;
-
 }
-.banner-container{
+footer{
+  background: #000 url('https://www.yangdong.co:8443/tianyan/index/f-bg.webp')no-repeat;
+  width: 100%;
+  height: 706px;
+  .footerTop{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    border-bottom: 1px solid #51565c;
+    .footerTopItem{
+      display: flex;
+      div{
+        margin-left: 20px;
+        p{
+          font-family: Roboto;
+          font-weight: bold;
+          font-size: 30px;
+          color: #FEFEFE;
+        }
+        span{
+          font-family: Source Han Sans CN;
+          font-weight: 400;
+          font-size: 24px;
+          color: #808080;
+        }
+      }
+    }
+  }
+  .footerCenter{
+    margin-top: 40px;
+    display: flex;
+    position: relative;
+    ul{
+      margin-right: 80px; 
+      h5{
+        margin-bottom: 40px;
+        a{
+          font-family: Source Han Sans CN;
+          font-weight: bold;
+          font-size: 24px;
+        }
+      }
+      li{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 36px;
+      }
+    }
+    .erweimaWrap{
+      position: absolute;
+      right: 80px;
+      text-align: center;
+      img{
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+.main{
+  width: 1400px;
+  margin: auto;
+}
+.upwards{
+  padding-top:80px;
+  margin-top:-80px;
+}
+.anchor{
+  a{
+    font-family: Source Han Sans CN;
+    font-weight: bold;
+    &:first-child{
+      color: #FF6600;
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, #D20000 0%, #FEB00F 100%);
+      }
+    }
+    &:hover{
+      color: #FF6600;
+      transition:all 0.3s linear;
+    }
+  }
 }
 // index page start
 .countup60{
@@ -64,5 +150,23 @@ header{
     }
   }
 }
-
+.slick-dots{
+  ul{
+    li{
+      width: 100px;
+    }
+  }
+}
 // index page end
+.imgbox{
+  overflow: hidden;
+  img{
+    transition:all 0.3s linear;
+  }
+  &:hover{
+    img{
+      transform: scale(1.1);
+      transition:all 0.3s linear;
+    }
+  }
+}

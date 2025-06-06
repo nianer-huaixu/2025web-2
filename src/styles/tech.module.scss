@@ -1,0 +1,128 @@
+.tech1{
+  .tech1TopBox{
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(0deg, #D20000 0%, #FEB00F 100%);
+    }
+  }
+  .tech1Bottom{
+    .tech1BottomLeft{
+      width: 66%;
+      left: 17%;
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+      background: rgba(227,2,18,0.6);
+      padding: 40px 20px;
+      font-size: 18px;
+    }
+  }
+}
+.tech3{
+  margin-bottom: 40px;
+  .tectTitle{
+    position: relative;
+    padding-bottom: 10px;
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: #EEEEEE;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 152px;
+      height: 3px;
+      background: linear-gradient(90deg, #D20000 0%, #FEB00F 100%);
+    }
+  }
+  li{
+    list-style: none;
+    font-size: 24px;
+    display: inline-flex;
+    margin: 25px 0;
+    p{
+      text-align: justify;
+    }
+  }
+}
+.tech5{
+  .tech5TopCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .tech5TopCenter1,.tech5TopCenter3{
+      display: flex;
+      font-size: 14px;
+      justify-content: center;
+      p{
+        position: relative;
+        color: #333;
+        margin: 18px;
+      }
+    }
+    .tech5TopCenter1{
+      p{
+        &::after,&::before{
+          position: absolute;
+          content: '';
+          border:12px solid transparent;
+          left: 50%;
+          bottom: -40px;
+          transform: translateX(-50%);
+        }
+        &::before{
+        border-top-color: #ffe4e3;
+        }
+        &::after{
+        border-top-color: #fff;
+          bottom: -37px; /*通过覆盖调整箭头粗细*/
+        }
+      }
+    }
+    .tech5TopCenter2{
+      margin: 30px 0;
+      .tech5TopCenter2Item{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: #f8f8f8;
+        border: 15px solid red;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    .tech5TopCenter3{
+      p{
+        &::after,&::before{
+          position: absolute;
+          content: '';
+          border:12px solid transparent;
+          left: 50%;
+          top: -40px;
+          transform: translate(-50%);
+        }
+        &::before{
+          border-bottom-color: #ffe4e3;
+        }
+        &::after{
+          top: -38px; /*通过覆盖调整箭头粗细*/
+          border-bottom-color: #fff;
+        }
+      }
+    }
+  }
+}
