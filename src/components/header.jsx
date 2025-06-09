@@ -33,7 +33,7 @@ export default function Header(){
   ]
 
   return <header style={{backgroundColor:scrollHeight>980?'#000':''}}
-    className="w-full px-20 h-20 leading-20 flex justify-between fixed z-50 items-center">
+    className="w-full px-20 h-20 leading-20 flex justify-between fixed z-999 items-center">
     <div><img width={205} src={store.common.url + 'header/logo.webp'}/></div>
     <div>
       {data.map((item,i)=>{

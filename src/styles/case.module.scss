@@ -1,0 +1,23 @@
+.title{
+  text-align: center;
+  padding:80px 0 40px;
+  h4{
+    position: relative;
+    font-family: Source Han Sans CN;
+    font-weight: 700;
+    background: linear-gradient(0deg, #D20000 0%, #FE690F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 4px;
+  }
+  span{
+    position: relative;
+    font-family: D-DIN-PRO;
+    font-weight: bold;
+    background: linear-gradient(0deg, #FFF 20%, #acacac 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    top: -70px;
+    z-index: -1;
+  }
+}

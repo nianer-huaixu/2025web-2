@@ -15,6 +15,12 @@ export default function Tech(){
     {text1:'一站式',text2:'生产加工服务'},
     {text1:'千吨级',text2:'常备库存'}
   ]
+  const gui = [
+    {img:store.common.url+'tech/gui3.webp',text:'过程质量检验',text1:'来料检验、理化检测、金相检验、过程抽检、人员抽检'},
+    {img:store.common.url+'tech/gui4.webp',text:'无损检验',text1:'来料检验、理化检测、金相检验、过程抽检、人员抽检'},
+    {img:store.common.url+'tech/gui5.webp',text:'成品检验',text1:'来料检验、理化检测、金相检验、过程抽检、人员抽检'},
+    {img:store.common.url+'tech/gui6.webp',text:'体系质量',text1:'来料检验、理化检测、金相检验、过程抽检、人员抽检'}
+  ]
   return <>
   <Banner url='tech.webp'/>
   <div className="bg-[#FCF5F5] h-20 w-full">
@@ -150,6 +156,15 @@ export default function Tech(){
         <p className='absolute left-4 bottom-20 text-3xl'>产品</p>
         <p className="absolute left-4 bottom-10 text-lg">100%产品检测</p>
       </div>
+    </div>
+    <div className={["flex main",styles.tech5Bottom].join(' ')}>
+      {gui.map((item,i)=>{
+        return <div key={i} className="relative">
+          <img src={item.img}/>
+          <span className="text-3xl absolute left-10 z-[+1]">{item.text}</span>
+          <p className="text-lg absolute z-[+1]">{item.text1}</p>
+        </div>
+      })}
     </div>
   </section>
 
