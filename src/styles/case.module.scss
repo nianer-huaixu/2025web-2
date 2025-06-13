@@ -1,6 +1,6 @@
 .title{
   text-align: center;
-  padding:80px 0 40px;
+  padding:80px 0 0px;
   h4{
     position: relative;
     font-family: Source Han Sans CN;
@@ -21,3 +21,57 @@
     z-index: -1;
   }
 }
+.case1{
+  transition:all 0.3s linear;
+  .case1Main{
+    height: 660px;
+    .case1MainL{
+      background: rgba(227,2,18,0.7);
+      p{
+        width: 440px;
+        height: 60px;
+        line-height: 60px;
+        font-family: Source Han Sans CN;
+        font-weight: 400;
+        font-size: 20px;
+        color: #FFFFFF;
+        transition:all 0.3s linear;
+        cursor: pointer;
+        &:hover{
+          background: linear-gradient(90deg, #D20000 0%, #FEB00F 100%);
+          transition:all 0.3s linear;
+        }
+      }
+      
+    }
+    .case1MainR{
+      padding: 40px;
+      img{
+        margin-bottom: 30px;
+      }
+      p{
+        line-height: 40px;
+        font-size: 18px;
+      }
+      a{
+        transition:all 0.3s linear;
+        &:hover{
+          background: linear-gradient(90deg, #D20000 0%, #FEB00F 100%);
+          transition:all 0.3s linear;
+        }
+      }
+    }
+  }
+}
+.caseItem{
+  background-color: #fff;
+  box-shadow: 3px 3px 7px 1px rgba(179,204,252,0.5);
+  border-radius: 10px;
+  border: 2px solid #FDFDFD;
+  img,p{
+    margin-bottom: 10px;
+  }
+  p{
+    letter-spacing: 2px;
+  }
+} 
