@@ -26,14 +26,14 @@ export default function Header(){
   const data = [
     {label:'首页',route:'/'},
     {label:'产品中心',route:'/product'},
-    {label:'技术中心',route:'/tech'},
+    {label:'技术中心',route:'/tech'}, 
     {label:'应用领域',route:'/apply'},
     {label:'产品案例',route:'/case'},
     {label:'联系我们',route:'/contact'}
   ]
 
   return <header style={{backgroundColor:scrollHeight>980?'#000':''}}
-    className="w-full px-20 h-20 leading-20 flex justify-between fixed z-999 items-center">
+    className="w-full px-20 h-20 leading-20 flex justify-between fixed z-999 items-center"> 
     <div><img width={205} src={store.common.url + 'header/logo.webp'}/></div>
     <div>
       {data.map((item,i)=>{
