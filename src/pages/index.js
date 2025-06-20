@@ -8,15 +8,15 @@ import CountUp from "react-countup"
 import { useState } from "react"
 import styles from '@/styles/index.module.scss'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-})
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// })
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-})
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// })
 function Product(){
   const store = useStore()
   const [activeSlide, setActiveSlide] = useState(0)

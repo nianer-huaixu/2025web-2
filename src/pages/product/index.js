@@ -5,7 +5,7 @@ import styles from '@/styles/product.module.scss'
 export default function Product(){
   const [filed,setField] = useState('')
   const store = useStore()
-  const data = [
+  const list = [
     {cate:'英科耐尔',en:'Inconel',label:'Inconel',list:'600、601、617、625、 718、x750'},
     {cate:'英科洛伊',en:'Incoloy',label:'Incoloy',list:'800、800H、825、926、 800HT'},
     {cate:'哈氏合金',en:'Hastelloy',label:'Hastelloy',list:'C276、C22、C4、B2、 G30、B3'},
@@ -23,6 +23,24 @@ export default function Product(){
     {cate:'奥氏体不锈钢',en:'ASS',label:'',list:'304、316L、309S、310S、316Ti'},
     {cate:'日本牌号',en:'SUS',label:'',list:'NCF825、NCF2B、NAS800、 NCF600、NAS630、NAS800H'},
   ]
+  const [cate,setCate] = useState('英科耐尔')
+  const [data,setData] = useState([])
+  const fetchData = async()=>{
+    try{
+      const response = await fetch('/api/productData',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({cate})
+      })
+      const res = await response.json()
+      setData(res)
+    }catch(err){
+      console.log(err);
+    }
+  }
+  useEffect(() => {
+      fetchData()
+  }, [])
   return <>
   <Banner url='product.webp'/>
   <div className={["main",styles.productTop].join(' ')}>
@@ -38,8 +56,9 @@ export default function Product(){
       </div>
     </div>
     <div className='grid grid-cols-5 gap-5 mt-10'>
-      {data.map((item,i)=>{
-        return <div key={i} className={['p-2',styles.cateItem].join(' ')}>
+      {list.map((item,i)=>{
+        return <div key={i} className={['p-2',cate==item.cate?styles.itemActive:styles.cateItem].join(' ')}
+        >
           <p className='text-center'>{item.cate} | {item.en}</p>
           <div className={styles.cateItemLink}>
             {item.label}{item.list.split((li,l)=>{

@@ -61,9 +61,7 @@
     }
   }
 }
-.cateItem{
-  background: linear-gradient(0deg, #F4F5FC 0%, #FFFEFF 100%);
-  box-shadow: 3px 3px 7px 1px rgba(179,204,252,0.5);
+.cateItem,.itemActive{
   border: 4px solid #FDFDFD;
   transition:all 0.3s linear;
   cursor: pointer;
@@ -76,6 +74,7 @@
     border-top: 1px dashed #000;
     padding-top: 10px;
     color: #010000;
+    transition:all 0.3s linear;
     a{
       font-family: Source Han Sans CN;
       font-weight: 400;
@@ -93,7 +92,26 @@
     .cateItemLink{
       color: #fff;
       border-color: #fff;
+      transition:all 0.3s linear;
     }
   }
   
+}
+.cateItem{
+  background: linear-gradient(0deg, #F4F5FC 0%, #FFFEFF 100%);
+  box-shadow: 3px 3px 7px 1px rgba(179,204,252,0.5);
+}
+.itemActive{
+  background: #F76115;
+  border: 4px solid #F76115;
+  p{
+    color: #fff;
+  }
+  .cateItemLink{
+    border-color: #fff;
+    color: #fff;
+    a{
+      color: #fff;
+    }
+  }
 }
